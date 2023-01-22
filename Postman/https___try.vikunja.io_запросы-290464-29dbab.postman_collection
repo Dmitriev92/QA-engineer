@@ -1,0 +1,283 @@
+{
+	"info": {
+		"_postman_id": "ff5d93ef-1257-4ffe-9011-ec6b27b07848",
+		"name": "https://try.vikunja.io запросы",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"Neo173\", \"email\": \"alexdmitriew@gmail.com\", \"password\": \"27061992\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://try.vikunja.io/api/v1/register",
+					"protocol": "https",
+					"host": [
+						"try",
+						"vikunja",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"Neo173\",\"password\":\"27061992\",\"long_token\":false}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://try.vikunja.io/api/v1/login",
+					"protocol": "https",
+					"host": [
+						"try",
+						"vikunja",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create label",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsZXhkbWl0cmlld0BnbWFpbC5jb20iLCJlbWFpbFJlbWluZGVyc0VuYWJsZWQiOmZhbHNlLCJleHAiOjE2NjkyMzEwNjQsImlkIjo5LCJpc0xvY2FsVXNlciI6dHJ1ZSwibG9uZyI6ZmFsc2UsIm5hbWUiOiIiLCJ0eXBlIjoxLCJ1c2VybmFtZSI6Ik5lbzE3MyJ9.0qlB1KByQuPbhQ4oQL58bSBNJjbkisgcrZHZcfAinEk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsZXhkbWl0cmlld0BnbWFpbC5jb20iLCJlbWFpbFJlbWluZGVyc0VuYWJsZWQiOmZhbHNlLCJleHAiOjE2NjkyMzEwNjQsImlkIjo5LCJpc0xvY2FsVXNlciI6dHJ1ZSwibG9uZyI6ZmFsc2UsIm5hbWUiOiIiLCJ0eXBlIjoxLCJ1c2VybmFtZSI6Ik5lbzE3MyJ9.0qlB1KByQuPbhQ4oQL58bSBNJjbkisgcrZHZcfAinEk",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"max_right\":null,\"id\":0,\"title\":\"Работаем\",\"hex_color\":\"e8e8e8\",\"description\":\"\",\"created_by\":{\"max_right\":null,\"id\":0,\"email\":\"\",\"username\":\"\",\"name\":\"\",\"exp\":0,\"type\":0,\"created\":null,\"updated\":null,\"settings\":{\"max_right\":null,\"name\":\"\",\"email_reminders_enabled\":true,\"discoverable_by_name\":false,\"discoverable_by_email\":false,\"overdue_tasks_reminders_enabled\":true,\"week_start\":0,\"timezone\":\"\",\"language\":\"ru-RU\"}},\"list_id\":0,\"text_color\":\"#4a4a4a\",\"created\":\"1970-01-01T03:00:00+03:00\",\"updated\":\"1970-01-01T03:00:00+03:00\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://try.vikunja.io/api/v1/labels",
+					"protocol": "https",
+					"host": [
+						"try",
+						"vikunja",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"labels"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create team",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IiIsImVtYWlsUmVtaW5kZXJzRW5hYmxlZCI6ZmFsc2UsImV4cCI6MTY2OTQ5MDM0NCwiaWQiOjcsImlzTG9jYWxVc2VyIjp0cnVlLCJsb25nIjpmYWxzZSwibmFtZSI6IiIsInR5cGUiOjEsInVzZXJuYW1lIjoibmVvMTIzIn0.XsAKkdDyHUJnsLuNJcFZwMA_enCW1x7AQNNijLxwNF8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsZXhkbWl0cmlld0BnbWFpbC5jb20iLCJlbWFpbFJlbWluZGVyc0VuYWJsZWQiOmZhbHNlLCJleHAiOjE2NjkyMzEwNjQsImlkIjo5LCJpc0xvY2FsVXNlciI6dHJ1ZSwibG9uZyI6ZmFsc2UsIm5hbWUiOiIiLCJ0eXBlIjoxLCJ1c2VybmFtZSI6Ik5lbzE3MyJ9.0qlB1KByQuPbhQ4oQL58bSBNJjbkisgcrZHZcfAinEk",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"max_right\":null,\"id\":0,\"name\":\"Комрад\",\"description\":\"\",\"members\":[],\"right\":0,\"created_by\":{\"max_right\":null,\"id\":0,\"email\":\"\",\"username\":\"\",\"name\":\"\",\"exp\":0,\"type\":0,\"created\":null,\"updated\":null,\"settings\":{\"max_right\":null,\"name\":\"\",\"email_reminders_enabled\":true,\"discoverable_by_name\":false,\"discoverable_by_email\":false,\"overdue_tasks_reminders_enabled\":true,\"week_start\":0,\"timezone\":\"\",\"language\":\"ru-RU\"}},\"created\":\"1970-01-01T00:00:00.000Z\",\"updated\":\"1970-01-01T00:00:00.000Z\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://try.vikunja.io/api/v1/teams",
+					"protocol": "https",
+					"host": [
+						"try",
+						"vikunja",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"teams"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get list of labels",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsZXhkbWl0cmlld0BnbWFpbC5jb20iLCJlbWFpbFJlbWluZGVyc0VuYWJsZWQiOmZhbHNlLCJleHAiOjE2NjkyMzEwNjQsImlkIjo5LCJpc0xvY2FsVXNlciI6dHJ1ZSwibG9uZyI6ZmFsc2UsIm5hbWUiOiIiLCJ0eXBlIjoxLCJ1c2VybmFtZSI6Ik5lbzE3MyJ9.0qlB1KByQuPbhQ4oQL58bSBNJjbkisgcrZHZcfAinEk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://try.vikunja.io/api/v1/labels?page=1",
+					"protocol": "https",
+					"host": [
+						"try",
+						"vikunja",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"labels"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get list of teams",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IiIsImVtYWlsUmVtaW5kZXJzRW5hYmxlZCI6ZmFsc2UsImV4cCI6MTY2OTQ5MDM0NCwiaWQiOjcsImlzTG9jYWxVc2VyIjp0cnVlLCJsb25nIjpmYWxzZSwibmFtZSI6IiIsInR5cGUiOjEsInVzZXJuYW1lIjoibmVvMTIzIn0.XsAKkdDyHUJnsLuNJcFZwMA_enCW1x7AQNNijLxwNF8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://try.vikunja.io/api/v1/teams?page=1",
+					"protocol": "https",
+					"host": [
+						"try",
+						"vikunja",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"teams"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gets one teams",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IiIsImVtYWlsUmVtaW5kZXJzRW5hYmxlZCI6ZmFsc2UsImV4cCI6MTY2OTQ5MzQ3MiwiaWQiOjcsImlzTG9jYWxVc2VyIjp0cnVlLCJsb25nIjpmYWxzZSwibmFtZSI6IiIsInR5cGUiOjEsInVzZXJuYW1lIjoibmVvMTIzIn0.2iud3iInTtRvpHms14aPT-tSwbkceJKCKJ3J5eUVQds",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://try.vikunja.io/api/v1/teams/10",
+					"protocol": "https",
+					"host": [
+						"try",
+						"vikunja",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"teams",
+						"10"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

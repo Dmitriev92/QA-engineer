@@ -1,0 +1,507 @@
+{
+	"info": {
+		"_postman_id": "2c7d5fcc-5550-4f23-9994-08fc39465885",
+		"name": "API Challenges",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST /challenger(201)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/challenger",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"challenger"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /challenges (200)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Challenger",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/challenges",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"challenges"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /todos (200)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Challenger",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/todos",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /todo (404) not plural",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Challenger",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/todo",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /todos/{id} (200)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Challenger",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/todos/978",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"todos",
+						"978"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HEAD /todos (200)",
+			"request": {
+				"method": "HEAD",
+				"header": [
+					{
+						"key": "X-Challenger",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/todos",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST/todos (200)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Challenger",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"create todo process payroll\",\r\n    \"doneStatus\": true,\r\n    \"description\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/todos",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /todos (200) ?filter",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Challenger",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/todos?doneStatus=true",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"todos"
+					],
+					"query": [
+						{
+							"key": "doneStatus",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /todos (400) doneStatus",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Challenger",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"create new todo\",\r\n    \"doneStatus\": \"bob\",\r\n    \"description\": \"created via insomnia\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/todos",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /todos/{id} (200)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Challenger",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/todos/754",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"todos",
+						"754"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /todos/{id} (200)",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "X-Challenger",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/todos/754",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"todos",
+						"754"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OPTIONS /todos (200)",
+			"request": {
+				"method": "OPTIONS",
+				"header": [
+					{
+						"key": "X-Challenger",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/todos",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /todos (200) XML",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Challenger",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/todos",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"todos"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /todos (200) JSON",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Challenger",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/todos",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"todos"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /todos (200) XML pref",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Challenger",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml, application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/todos",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"todos"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /todos (200) no accept",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Challenger",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml, application/json",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/todos",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"todos"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /todos (406)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Challenger",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					},
+					{
+						"key": "Accept",
+						"value": "application/gzip",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/todos",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"todos"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
